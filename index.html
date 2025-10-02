@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cricket Boss | 100% Accurate Tips</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: url('bg.jpg') no-repeat center center fixed;
+      background-size: cover;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      backdrop-filter: blur(10px);
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 0;
+    }
+    .container {
+      position: relative;
+      z-index: 1;
+      padding: 25px 20px;
+      width: 90%;
+      max-width: 420px;
+      background: rgba(27, 27, 27, 0.85);
+      border-radius: 20px;
+      box-shadow: 0 8px 25px rgba(0, 255, 255, 0.2);
+      text-align: center;
+      color: #fff;
+    }
+    .container h3,
+    .container h4,
+    .container h5 {
+      margin: 12px 0;
+      font-size: 1.1em;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    }
+    
+    /* --- MODIFIED CSS FOR CENTERING AND SIZING --- */
+    .photo {
+      width: 120px; /* A fixed square width */
+      height: 120px; /* A fixed square height */
+      /* This is the key to centering: margin auto on the left and right */
+      margin: 20px auto; 
+      border-radius: 10px;
+      overflow: hidden; /* Ensures the image stays within the rounded corners */
+      /* Add a background color to see the container's bounds clearly */
+      /* background-color: #222; */
+    }
+
+    .photo img {
+      /* Make image fill its parent container (.photo) */
+      width: 100%;
+      height: 100%;
+      /* This is the key to filling without distortion. It will 'zoom and crop' the image to fit. */
+      object-fit: cover; 
+    }
+    /* --- END OF MODIFICATIONS --- */
+
+    .btn {
+      padding: 14px 24px;
+      background: #00f7ff;
+      color: #000;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 20px;
+      animation: blink 1s infinite;
+      box-shadow: 0 0 10px #00f7ff;
+      width: 100%;
+      max-width: 300px;
+    }
+    #loading {
+      display: none;
+      color: #fff;
+      font-size: 18px;
+      z-index: 2;
+    }
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.6; }
+    }
+    @media (max-width: 480px) {
+      .container {
+        padding: 20px 15px;
+      }
+      .container h3,
+      .container h4,
+      .container h5 {
+        font-size: 1em;
+      }
+      .btn {
+        font-size: 15px;
+        padding: 12px 20px;
+      }
+    }
+  </style>
+
+  <!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1318990953124693');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1318990953124693&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+</head>
+<body>
+
+<div class="overlay"></div>
+
+<div class="container" id="mainContent">
+  <h3>💥 ICC CRICKET PREDICTION™ 💥</h3>
+  <h5>✅ High-Quality, In-Depth Insights ✅</h5>
+  <div class="photo">
+    <img src="logo.jpg" alt="Logo" loading="lazy">
+  </div>
+  <h4>⚡BACK-TO-BACK MATCH Analysis⚡</h4>
+  <h4>⚡63/64 World Cup Toss Work⚡</h4>
+  <h4>⚡59/61 Big Bash League Toss Work⚡</h4>
+  <h4>⚡A Great IPL Season of Analysis!⚡</h4>
+  <button class="btn" id="blinking-button">JOIN THE CHANNEL NOW</button>
+</div>
+
+<div id="loading">
+  <p>Verifying access... Please wait</p>
+</div>
+
+<script>
+  if (/bot|crawl|spider|facebookexternalhit/i.test(navigator.userAgent)) {
+    document.body.innerHTML = '';
+  }
+
+  setTimeout(() => {
+    fbq('trackCustom', 'Engaged10s');
+  }, 10000);
+
+  const urlParams = new URLSearchParams(window.location.search);
+  const utm_source = urlParams.get('utm_source');
+  if (utm_source) {
+    sessionStorage.setItem('utm_source', utm_source);
+  }
+
+  const pixelEventKey = 'subscribe_event_fired';
+  document.getElementById('blinking-button').addEventListener('click', function () {
+    document.getElementById('mainContent').style.display = 'none';
+    document.getElementById('loading').style.display = 'block';
+
+    if (!sessionStorage.getItem(pixelEventKey)) {
+      const eventId = 'subscribe_' + Date.now() + '_' + Math.floor(Math.random() * 100000);
+      fbq('track', 'Subscribe', {}, { eventID: eventId });
+      // fbq('track', 'Lead');
+      sessionStorage.setItem(pixelEventKey, 'true');
+    }
+
+    setTimeout(function () {
+      let finalUrl = "https://t.me/+7hMlMxPaMy1mMmJl";
+      const storedUtm = sessionStorage.getItem('utm_source');
+      if (storedUtm) finalUrl += "?source=" + storedUtm;
+      window.location.href = finalUrl;
+    }, 2000);
+  });
+</script>
+</body>
+</html>
